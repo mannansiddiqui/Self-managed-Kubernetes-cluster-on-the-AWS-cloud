@@ -1,14 +1,14 @@
-# Setup self managed Kubernetes cluster on AWS cloud
+# Self-managed Kubernetes cluster on the AWS cloud
 
 #### Description:
 
-- Launch 3 EC2 servers
-- Configure first as a master node and the other two as a slave nodes
-- Deploy one WordPress website using deployment kind
-- Connect RDS as a DB with WordPress Site
-- Migrate the data of K8S DB in RDS
+- Launch three EC2 instances.
+- Configure the first instance as a master node and the other two instances as slave nodes.
+- Deploy a WordPress website using the deployment kind.
+- Connect an RDS instance as the database for the WordPress site.
+- Migrate the data to the new database.
 
-#### Step-1: Launch 3 EC2 servers
+#### Step-1: Launch three EC2 instances.
 
 Firstly, log in to the AWS management console.
 
@@ -46,7 +46,7 @@ Click on the instance id to navigate to the EC2 dashboard and edit their names.
 
 ![9](https://user-images.githubusercontent.com/74168188/184804077-b27ccb53-b74b-4b84-b933-0d5a1368b526.png)
 
-#### Step-2: Configure first as a master node and the other two as a slave nodes
+#### Step-2: Configure the first instance as a master node and the other two instances as slave nodes.
 
 Let's configure master node
 
@@ -235,7 +235,7 @@ From master node:
 From different node:
 ![46](https://user-images.githubusercontent.com/74168188/184846541-48a006b1-b48d-4570-be9d-4fb82cef97e3.png)
 
-#### Step-3: Deploy one WordPress website using deployment kind
+#### Step-3: Deploy a WordPress website using the deployment kind.
 
 Before creating deployment we need to create Database because Wordpress requires WORDPRESS_DB_HOST, WORDPRESS_DB_USER, WORDPRESS_DB_PASSWORD, WORDPRESS_DB_NAME else Wordpress container will exit again and again.
 
@@ -341,11 +341,11 @@ Now, create page
  
  ![71](https://user-images.githubusercontent.com/74168188/184884339-f9d66f1a-a135-44f4-898e-77f422792424.png)
  
- #### Step-4: Connect RDS as a DB with WordPress Site
+ #### Step-4: Connect an RDS instance as the database for the WordPress site.
  
  Already done in step-3
  
- #### Step-5: Migrate the data of K8S DB in RDS
+ #### Step-5: Migrate the data to the new database.
  
  Now take a dump of mysql db from any node using ```mysqldump -h <ENDPOINT> -u <USERNAME> -p <DB_NAME>```
  
