@@ -1,4 +1,4 @@
-# Self-managed Kubernetes cluster on the AWS cloud
+# Set up self-managed Kubernetes cluster on the AWS cloud
 
 #### Description:
 
